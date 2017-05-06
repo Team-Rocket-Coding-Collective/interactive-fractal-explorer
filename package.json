@@ -1,0 +1,22 @@
+{
+  "name": "interactive-fractal-explorer",
+  "version": "1.0.0",
+  "description": "A web app that allows a user to modify parameters of an escape-time fractal or L-System and view instantly how those modifications affect the fractal.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Team-Rocket-Coding-Collective/interactive-fractal-explorer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Team-Rocket-Coding-Collective/interactive-fractal-explorer/issues"
+  },
+  "homepage": "https://github.com/Team-Rocket-Coding-Collective/interactive-fractal-explorer#readme",
+  "devDependencies": {
+    "http-server": "^0.10.0"
+  }
+}
