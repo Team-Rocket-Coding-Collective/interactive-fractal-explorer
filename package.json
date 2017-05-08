@@ -4,7 +4,9 @@
   "description": "A web app that allows a user to modify parameters of an escape-time fractal or L-System and view instantly how those modifications affect the fractal.",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build" : "webpack --config conf/webpack.config",
+    "dev" : " npm run build && webpack-dev-server --config conf/webpack.config --port 3000 --hot --inline --colors"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,11 @@
   },
   "homepage": "https://github.com/Team-Rocket-Coding-Collective/interactive-fractal-explorer#readme",
   "devDependencies": {
-    "http-server": "^0.10.0"
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "html-webpack-plugin": "^2.21.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
   }
 }
