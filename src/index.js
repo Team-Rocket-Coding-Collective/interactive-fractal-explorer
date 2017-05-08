@@ -1,6 +1,8 @@
 import Complex from "./complex";
 
-console.log(Complex.of(2.4, 45.3).toString());
+let Z = new Complex(2.4, 45.3);
+let C = new Complex(Z.real(), Z.imag());
+console.log(C.toString());
 
 window.setup = function(){
 	createCanvas(500, 500);

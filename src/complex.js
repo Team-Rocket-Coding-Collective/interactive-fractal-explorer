@@ -1,15 +1,7 @@
 export default class Complex {
-	constructor(){
-		if (arguments.length === 1){
-			this.real = arguments[0]["0"];
-			this.imag = arguments[0]["1"];
-		} else if (arguments.length === 2) {
-			this.real = arguments[0];
-			this.imag = arguments[1];
-		} else {
-			throw `Error`;
-		}
-
+	constructor(real, imag){
+		this._real = real;
+		this._imag = imag;
 	}
 
 	_performChecks(value){
@@ -28,16 +20,16 @@ export default class Complex {
 		let imag;
 		switch (operation){
 			case '+':
-				real = this.real + num.real;
-				imag = this.imag + num.imag;
+				real = this._real + num.real;
+				imag = this._imag + num.imag;
 				break;
 			case '-':
-				real = this.real - num.real;
-				imag = this.imag - num.imag;
+				real = this._real - num.real;
+				imag = this._imag - num.imag;
 				break;
 			case '*':
-				real = this.real * num.real - this.imag * num.imag;
-				imag = this.imag * num.real + this.real * num.imag;
+				real = this._real * num.real - this._imag * num.imag;
+				imag = this._imag * num.real + this._real * num.imag;
 				break;
 			case '/':
 				throw `Division of complex numbers is not yet implemented`;
@@ -46,9 +38,13 @@ export default class Complex {
 		return Complex.of(real, imag);
 	}
 
-	static of(){
-		return new Complex(arguments);
+	static of(real, imag){
+		return new Complex(real, imag);
 	}
+
+	real(){ return this._real; }
+
+	imag(){ return this._imag; }
 
 	add(num){
 		return this._doOperation(num, '+');
@@ -67,6 +63,6 @@ export default class Complex {
 	}
 
 	toString(){
-		return `(${this.real} + ${this.imag}i)`;
+		return `(${this._real} + ${this._imag}i)`;
 	}
 }
