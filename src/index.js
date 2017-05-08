@@ -1,6 +1,6 @@
-import {world} from "./mymodule";
+import Complex from "./complex";
 
-console.log(`hello ${world}`);
+console.log(Complex.of(2.4, 45.3).toString());
 
 window.setup = function(){
 	createCanvas(500, 500);
